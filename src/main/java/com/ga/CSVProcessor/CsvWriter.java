@@ -28,7 +28,7 @@ public class CsvWriter {
             writer.write(HEADER); //add the header
             writer.newLine(); //add a line after header
 
-            //for each employee --> print
+            //for each employee --> write
             for (SalaryTotal result : results) {
                 writer.write(toCsvLine(result));
                 writer.newLine();

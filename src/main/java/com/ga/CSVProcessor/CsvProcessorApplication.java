@@ -28,7 +28,5 @@ public class CsvProcessorApplication {
 		writer.write(results, Path.of("output/updated_employees.csv"));
 
 		context.close();
-
 	}
-
 }

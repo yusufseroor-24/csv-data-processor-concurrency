@@ -23,7 +23,9 @@ public class SalaryCalculator {
 
         BigDecimal raiseRate = employee.role().getRaiseRate();
 
+        //calculate the years worked by finding the gap
         int yearsWorked = Period.between(employee.joinedDate(), today).getYears();
+        //if more than a year, calculate yearsRaise
         if(yearsWorked >= 1){
             BigDecimal yearsRaise = RATE_PER_YEAR.multiply(BigDecimal.valueOf(yearsWorked));
             raiseRate = raiseRate.add(yearsRaise);
