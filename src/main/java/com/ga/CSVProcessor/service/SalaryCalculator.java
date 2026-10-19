@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.time.Period;
 
 @Service
-public class salaryCalculator {
+public class SalaryCalculator {
     private static final double MIN_COMPLETION = 0.6;
     private static final BigDecimal RATE_PER_YEAR = new BigDecimal("0.02");
 
