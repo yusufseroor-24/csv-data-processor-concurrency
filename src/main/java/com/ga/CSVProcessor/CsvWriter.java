@@ -25,9 +25,10 @@ public class CsvWriter {
         Files.createDirectories(outputFile.getParent());
 
         try (BufferedWriter writer = Files.newBufferedWriter(outputFile, StandardCharsets.UTF_8)) {
-            writer.write(HEADER);
-            writer.newLine();
+            writer.write(HEADER); //add the header
+            writer.newLine(); //add a line after header
 
+            //for each employee --> print
             for (SalaryTotal result : results) {
                 writer.write(toCsvLine(result));
                 writer.newLine();
@@ -39,7 +40,7 @@ public class CsvWriter {
     private String toCsvLine(SalaryTotal result) {
         Employee employee = result.employee();
 
-        BigDecimal oldSalary = employee.salary().setScale(2, RoundingMode.HALF_UP);
+        BigDecimal oldSalary = employee.salary().setScale(2, RoundingMode.HALF_UP); //2 decimals
         String raisePercent = result.raiseRate().multiply(BigDecimal.valueOf(100)).stripTrailingZeros()
                 .toPlainString();
 
