@@ -29,5 +29,7 @@ public class salaryCalculator {
             raiseRate = raiseRate.add(yearsRaise);
         }
 
+        BigDecimal newSalary = employee.salary().multiply(BigDecimal.ONE.add(raiseRate)).setScale(2, RoundingMode.HALF_UP);
+        return new SalaryTotal(employee, raiseRate, newSalary);
     }
 }
