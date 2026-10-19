@@ -47,17 +47,17 @@ public class CvsReader {
     }
 
     Employee parseLine(String line){
-        String[] p = line.split(",", -1);
-        if(p.length !=EXPECTED_CVS_COLUMNS){
-            throw new IllegalArgumentException("expected " + EXPECTED_CVS_COLUMNS + " columns but found " + p.length);
+        String[] section = line.split(",", -1);
+        if(section.length !=EXPECTED_CVS_COLUMNS){
+            throw new IllegalArgumentException("expected " + EXPECTED_CVS_COLUMNS + " columns but found " + section.length);
         }
 
-        int id = Integer.parseInt(p[0].trim());
-        String name = p[1].trim();
-        BigDecimal salary = new BigDecimal(p[2].trim());
-        LocalDate joinedDate = LocalDate.parse(p[3].trim());
-        Roles role = Roles.fromString(p[4]);
-        double projectCompletion = Double.parseDouble(p[5].trim());
+        int id = Integer.parseInt(section[0].trim());
+        String name = section[1].trim();
+        BigDecimal salary = new BigDecimal(section[2].trim());
+        LocalDate joinedDate = LocalDate.parse(section[3].trim());
+        Roles role = Roles.fromString(section[4]);
+        double projectCompletion = Double.parseDouble(section[5].trim());
 
         return new Employee(id, name, salary, joinedDate, role, projectCompletion);
     }
