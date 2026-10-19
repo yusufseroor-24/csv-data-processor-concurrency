@@ -17,9 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CvsReader {
+public class CsvReader {
 
-    private static final Logger log  = LoggerFactory.getLogger(CvsReader.class);
+    private static final Logger log  = LoggerFactory.getLogger(CsvReader.class);
     private static final int EXPECTED_CVS_COLUMNS = 6;
 
     public List<Employee> read(Resource resource) throws IOException{
