@@ -16,6 +16,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Read employee data from CSV file and converts each line to employee object
+ * invalid lines are skipped
+ */
+
 @Service
 public class CsvReader {
 

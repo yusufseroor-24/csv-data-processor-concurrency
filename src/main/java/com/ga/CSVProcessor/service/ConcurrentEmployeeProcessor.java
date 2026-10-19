@@ -17,6 +17,11 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * process employees using fixed thread pool with 4 count
+ * results are added to shared list protected by ReentrantLock
+ */
+
 @Service
 public class ConcurrentEmployeeProcessor {
     private static final Logger log = LoggerFactory.getLogger(ConcurrentEmployeeProcessor.class);

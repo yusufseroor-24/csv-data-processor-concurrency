@@ -12,6 +12,11 @@ import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * entry point of concurrent csv data processor for employees
+ * runs the read, process, and write result
+ */
+
 @SpringBootApplication
 public class CsvProcessorApplication {
 

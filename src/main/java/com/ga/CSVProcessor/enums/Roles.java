@@ -2,6 +2,11 @@ package com.ga.CSVProcessor.enums;
 
 import java.math.BigDecimal;
 
+/**
+ * The roles an employee can have in the company
+ * Director 5%, Manager 2%, Employee 1%.
+ */
+
 public enum Roles {
 
 

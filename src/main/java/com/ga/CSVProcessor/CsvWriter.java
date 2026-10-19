@@ -15,6 +15,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
+/**
+ * writes new salary result to CSV file with a header in output/
+ * Columns: id,name,role,oldSalary,raisePercent,newSalary
+ */
+
 @Service
 public class CsvWriter {
 

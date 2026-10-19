@@ -9,6 +9,14 @@ import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.Period;
 
+/**
+ * applies salary increase to an employee
+ * role raise and tenure raise are added
+ * completion below 60% has no increase
+ * role raise are Director 5%, Manager 2%, Employee 1%
+ * Tenure raise: 2% for full year worked
+ */
+
 @Service
 public class SalaryCalculator {
     private static final double MIN_COMPLETION = 0.6;
