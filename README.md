@@ -2,9 +2,6 @@ Concurrent Employee CSV Data Processor
 - 
 As spring boot app that reads employees data from a CSV file, calculate salary increase concurrently using using a thread pool, and writes the results to a new CSV
 
-- **Input:** `src/main/resources/test_employees.csv`
-- **Output:** `output/updated_employees.csv`
-
 ## Salary Rules
 1. **Completion below 60%:** no increase
 2. **Role:** Director +5%, Manager +2%, Employee +1%
@@ -22,6 +19,9 @@ How It works
 
 ## Workflow
 CsvReader → ConcurrentEmployeeProcessor → CsvWriter
+
+- **Input:** `src/main/resources/test_employees.csv`
+- **Output:** `output/updated_employees.csv`
 
 Concurrency
 - 
