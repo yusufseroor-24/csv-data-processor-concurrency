@@ -29,9 +29,8 @@ Concurrency
 - **Lock:** `ReentrantLock` protects the shared results list so no result is lost
 - `Employee` is immutable and `SalaryCalculator` is stateless, so both are safe without locks
 
-Sample Input
+Sample Input Format 
 -
-## Input Format
 Columns: `id,name,salary,joinedDate,role,projectCompletion`
 ```
 1,Alice,52000.0,2019-05-12,Employee,0.8
