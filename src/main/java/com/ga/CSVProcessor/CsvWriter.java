@@ -42,10 +42,12 @@ public class CsvWriter {
         log.info("Wrote {} rows to {}", results.size(), outputFile.toAbsolutePath());
     }
 
+    //turning a result into Csv line
     private String toCsvLine(SalaryTotal result) {
         Employee employee = result.employee();
 
         BigDecimal oldSalary = employee.salary().setScale(2, RoundingMode.HALF_UP); //2 decimals
+        //calculates %
         String raisePercent = result.raiseRate().multiply(BigDecimal.valueOf(100)).stripTrailingZeros()
                 .toPlainString();
 

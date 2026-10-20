@@ -8,12 +8,10 @@ import java.math.BigDecimal;
  */
 
 public enum Roles {
-
-
+    //enum roles with their raise rate
     DIRECTOR(new BigDecimal("0.05")),
     MANAGER(new BigDecimal("0.02")),
     EMPLOYEE(new BigDecimal("0.01"));
-
 
     private final BigDecimal raiseRate;
 
