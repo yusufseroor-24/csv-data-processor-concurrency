@@ -29,3 +29,10 @@ Concurrency
 - **Lock:** `ReentrantLock` protects the shared results list so no result is lost
 - `Employee` is immutable and `SalaryCalculator` is stateless, so both are safe without locks
 
+Sample Output
+- 
+```
+id,name,role,oldSalary,raisePercent,newSalary
+1,Alice,EMPLOYEE,52000.00,15,59800.00
+6,Frank,DIRECTOR,83000.00,0,83000.00
+```
